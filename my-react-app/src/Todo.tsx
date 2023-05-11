@@ -5,7 +5,6 @@ export default function Todo() {
   const [todos, setTodos] = useState('')
   const [getTodos, setGetTodos] = useState<{ _id: string; todos: string }[]>([]);
   const [index, setIndex] = useState(0)
-  const [isVisible, setIsVisible] = useState(true);
 
 
   function handleClick() : void {
@@ -54,11 +53,7 @@ export default function Todo() {
       </div>
       {getTodos.map(todo => {
         return <div className='todoDiv'>
-          {isVisible ? (
             <p key={index}>{todo.todos}</p>
-          ) : (
-            <input type="text" onChange={(e) => (e.target.value)}/>
-          )}
             <div>
               <button onClick={() => handleDelete(todo._id)}>Delete</button>
             </div>
