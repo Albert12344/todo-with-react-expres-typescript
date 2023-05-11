@@ -1,0 +1,85 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.motherDiv {
+  height: 80vh;
+  width: 70vw;
+  background-color: rgb(22, 106, 233);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: white;
+}
+
+.inputDiv {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.input {
+  height: 40px;
+  width: 400px;
+  border: none;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.submit {
+  height: 42px;
+  width: 100px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.todoDiv {
+  width: 500px;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  margin-top: 10px;
+}
+
+.todoDiv button {
+  height: 30px;
+  width: 80px;
+  border-radius: 0px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.todoDiv button:focus {
+  outline: none;
+}
+
+.todoDiv button:hover {
+  outline: none;
+}
+
+.todoDiv p {
+  color: white;
+  font-size: 18px;
+}
+
+.todoDiv div {
+  height: 30px;
+  width: 170px;
+  display: flex;
+  justify-content: space-evenly;
+}
