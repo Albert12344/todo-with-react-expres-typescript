@@ -8,7 +8,7 @@
 .motherDiv {
   height: 80vh;
   width: 70vw;
-  background-color: rgb(22, 106, 233);
+  background-color: rgb(62, 122, 21);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,30 +46,33 @@ h2 {
   font-size: 14px;
 }
 
+.motherTodo {
+  width: 550px;
+  height: 7vh;
+  margin-top: 10px;
+}
+
 .todoDiv {
-  width: 500px;
-  height: 8vh;
+  width: 550px;
+  height: 7vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 2px solid white;
-  margin-top: 10px;
 }
 
-.todoDiv button {
-  height: 30px;
-  width: 80px;
-  border-radius: 0px;
-  font-size: 14px;
+.todoDiv h2 {
+  font-size: 26px;
   font-weight: 400;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
-.todoDiv button:focus {
-  outline: none;
-}
-
-.todoDiv button:hover {
-  outline: none;
+.todoDiv h3 {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  font-weight: 450;
 }
 
 .todoDiv p {
@@ -77,9 +80,35 @@ h2 {
   font-size: 18px;
 }
 
-.todoDiv div {
+.crud {
   height: 30px;
-  width: 90px;
+  width: 220px;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+}
+
+.checkbox {
+  height: 23px;
+  width: 23px;
+  cursor: pointer;
+}
+
+.todoDiv img {
+  height: 22px;
+  cursor: pointer;
+}
+
+.editingText {
+  height: 30px;
+  width: 270px;
+  border: none;
+  
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+}
+
+.editingText:focus {
+  outline: none;
 }

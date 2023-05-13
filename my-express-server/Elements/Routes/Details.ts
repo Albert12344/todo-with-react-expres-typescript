@@ -3,7 +3,7 @@ import todoModel from '../Mongodb/Schema';
 
 export async function postTodos(req: Request, res: Response) {
     const {text, status} = req.body
-    
+
     try{
       await todoModel.create({
           text,
@@ -44,4 +44,21 @@ export async function deleteTodos(req: Request, res: Response) {
     console.error(error);
     return res.status(500).json({ error: 'Internal server error' });
   }
+};
+
+export async function editTodos(req: Request, res: Response) {
+  const id = req.params.id;
+  const updatedText = req.body.text;
+
+  // Find the todo by id
+  const todo = await todoModel.findOneAndUpdate({text: updatedText});
+
+  if (!todo) {
+    return res.status(404).json({ error: 'Todo not found' });
+  }
+
+  // Update the todo's text
+  todo.text = updatedText;
+
+  res.json({ status: 200, message: 'Todo updated successfully' });
 };
